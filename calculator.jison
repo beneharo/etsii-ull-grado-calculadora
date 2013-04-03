@@ -6,6 +6,7 @@
 
 \s+                   /* skip whitespace */
 [0-9]+("."[0-9]+)?\b  return 'NUMBER'
+\b[A-Za-z_]\w*\b      return idORrw(yytext)
 "*"                   return '*'
 "/"                   return '/'
 "-"                   return '-'
